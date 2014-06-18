@@ -1,0 +1,43 @@
+{
+  "name": "Checkout",
+  "version": "0.0.1",
+  "description": "Checkout application for flea markets.",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelklopf/Checkout.git"
+  },
+  "keywords": [
+    "checkout",
+    "passport",
+    "nodejs",
+    "expressjs",
+    "jade",
+    "flea market",
+    "Flohmarkt"
+  ],
+  "author": "Michael Klopf",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "bower": "~1.3.3"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "~0.0.3",
+    "body-parser": "1.2.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "1.1.0",
+    "express": "~4.3.2",
+    "express-session": "^1.2.1",
+    "jade": "~1.3.1",
+    "method-override": "^1.0.2",
+    "mongoose": "~3.8.11",
+    "node-env-file": "^0.1.3",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "restler": "~3.2.2",
+    "stylus": "~0.45.1"
+  }
+}
