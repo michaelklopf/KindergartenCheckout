@@ -1,12 +1,15 @@
 // static/js/models/example.js
 
-var app = app || {};
+var _ = Underscore = require('underscore');
+var Backbone = require('backbone');
 
-app.Example = Backbone.Model.extend({
+var Example = Backbone.Model.extend({
     idAttribute: '_id',
-    
+
     defaults: {
         name: 'Example',
         mail: 'example@example.com'
     }
 });
+
+module.exports = Example;

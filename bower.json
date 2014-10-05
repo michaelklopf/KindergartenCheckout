@@ -1,0 +1,30 @@
+{
+  "name": "checkout",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Klopf <klopf.michael@gmail.com>"
+  ],
+  "description": "Checkout application designed for kindergarten bazar.",
+  "main": "web.js",
+  "keywords": [
+    "checkout",
+    "bootstrap",
+    "fontawesome",
+    "flea",
+    "market",
+    "Flohmarkt"
+  ],
+  "license": "BSD-1-Clause",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.2.0"
+  }
+}

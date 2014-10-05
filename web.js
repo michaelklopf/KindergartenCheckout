@@ -13,7 +13,6 @@ var methodOverride = require('method-override');
 var session     = require('express-session');
 var env         = require('node-env-file');
 
-// load env vars
 env(__dirname + '/.env');
 
 // load config and create database
@@ -25,23 +24,22 @@ require('./config/passport.js')(passport);
 // create and configure express app
 var app = express();
 
-console.log(process.env.PORT);
-
-app.use(cookieParser(process.env.SECRETAUTH));
+app.use(cookieParser('secretpassauth'));
 app.use(bodyParser());
-app.use(session({key: process.env.SESSIONKEY, cookie: {maxAge: 60000 }}));
+app.use(session({ key: 'session', cookie: { maxAge: 60000 }}));
 app.use(methodOverride());
 
 app.use(stylus.middleware(__dirname + '/static'));
 
-app.use("/css" , express.static(__dirname + '/static/css'));
-app.use("/js" , express.static(__dirname + '/static/js'));
-app.use("/fonts", express.static(__dirname + '/static/fonts'));
+app.use("/css" , express.static(__dirname + '/dist/css'));
+app.use("/js" , express.static(__dirname + '/dist/js'));
+app.use("/fonts", express.static(__dirname + '/dist/fonts'));
+//app.use("/lib", express.static(__dirname + '/bower_components'));
 
 app.set('views', __dirname + '/app/views');
 app.engine('jade', require('jade').__express);
-app.set('view engine', 'jade');
-app.set('port', process.env.PORT || 80);
+app.set('view engine', 'jade');  // revert to ejs with replacing jade -> ejs and comment the above line
+app.set('port', process.env.PORT || 8080);
 
 app.use(passport.initialize());
 app.use(passport.session());
