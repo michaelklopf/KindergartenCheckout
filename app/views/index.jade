@@ -31,7 +31,7 @@ html(lang="en")
                                 a(href='/') Home
                             li
                               if user
-                                a(href='/profile') My Profile
+                                a(href='/profile') Events
                             li
                               if !user
                                 a(href='/login') Login
@@ -43,7 +43,7 @@ html(lang="en")
                                 a(href='/logout') Logout
                             li
                               if user
-                                a(href='/profile') You are logged in with #{user.local.email}.
+                                p.navbar-text You are logged in with #{user.local.email}.
 
             // Main content
             div.container
