@@ -1,12 +1,12 @@
-// app/models/example.js
+// app/models/event.js
 
 var mongoose    = require('mongoose');
 var user        = require('./user');
 
-var exampleSchema = new mongoose.Schema({
+var eventSchema = new mongoose.Schema({
     name    : String,
-    mail    : String,
+    date    : Date,
     user    : [{type : String, ref : 'User'}]
 });
 
-module.exports = mongoose.model('Example', exampleSchema);
+module.exports = mongoose.model('Event', eventSchema);

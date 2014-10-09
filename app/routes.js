@@ -2,7 +2,7 @@
 
 // expose routes
 module.exports = function(app, passport) {
-    require('./routes/examples.js')(app);
+    require('./routes/events.js')(app);
     require('./routes/auth.js')(app, passport);
 
     // application routes

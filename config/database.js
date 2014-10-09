@@ -1,5 +1,5 @@
 // config/database.js
 
 module.exports = {
-    url: 'mongodb://localhost/authtest'
+    url: 'mongodb://localhost/kindergartencheckout'
 };
